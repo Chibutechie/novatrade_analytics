@@ -1,2 +1,17 @@
+# Environment
 .env
-.env
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Pipeline artifacts
+pipeline.log
+data/parquet/
+
+# IDE
+.vscode/
+.idea/
+requirements.txt
