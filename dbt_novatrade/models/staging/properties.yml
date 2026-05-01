@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: st_customers
+    description: "Staging model for customer records."
+    columns:
+      - name: CustomerID
+        description: "Primary key for a customer."
+        data_tests:
+          - unique
+          - not_null
+
+  - name: st_products
+    description: "Staging model for product records."
+    columns:
+      - name: ProductID
+        description: "Primary key for a product."
+        data_tests:
+          - unique
+          - not_null
+
+  - name: st_sales
+    description: "Staging model for sales records."
+    columns:
+      - name: TransactionID
+        description: "Primary key for a transaction."
+        data_tests:
+          - unique
+          - not_null
+
+  - name: st_stores
+    description: "Staging model for store records."
+    columns:
+      - name: StoreID
+        description: "Primary key for a store."
+        data_tests:
+          - unique
+          - not_null

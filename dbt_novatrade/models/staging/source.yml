@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+  - name: raw
+    database: novatrade
+    schema: raw
+
+    tables:
+      - name: ntg_customers
+        description: Customers Table
+        columns:
+          - name: CustomerID
+            data_tests:
+              - not_null
+              - unique
+
+      - name: ntg_products
+        description: Raw products table
+        columns:
+          - name: ProductID
+            data_tests:
+              - not_null
+              - unique
+
+      - name: ntg_stores
+        description: Raw stores table
+        columns:
+          - name: StoreID
+            data_tests:
+              - not_null
+              - unique
+
+      - name: ntg_sales
+        description: Raw sales/transactions table
+        columns:
+          - name: TransactionID
+            data_tests:
+              - not_null
+              - unique
+
+      - name: ntg_budget
+        description: Raw budget table
+        columns:
+          - name: BudgetID
+            data_tests:
+              - not_null
+              - unique
