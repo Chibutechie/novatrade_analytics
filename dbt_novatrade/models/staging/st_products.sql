@@ -9,7 +9,7 @@ cleaned as (
         "Category"::varchar as category,
         "SubCategory"::varchar as subcategory,
         "Brand"::varchar as brand,
-        "CostPrice"::float as unitprice,
+        round("CostPrice"::numeric, 2) as costprice,
         "Tier"::varchar as tier
     from source 
     where "ProductID" is not null
