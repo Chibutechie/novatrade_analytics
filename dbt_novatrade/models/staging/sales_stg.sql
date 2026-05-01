@@ -11,7 +11,7 @@ cleaned as (
         "StoreID"::varchar as store_id,
         "Quantity"::int as quantity,
         round("UnitPrice"::numeric, 2) as unit_price,
-        round(("DiscountPct"::numeric / 100), 4) as discount,
+       "DiscountPct"::numeric as discount,
         "ReturnFlag"::boolean as return_flag,
         "ReturnDate"::date as return_date,
         round("ShipCost"::numeric, 2) as ship_cost
