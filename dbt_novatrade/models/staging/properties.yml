@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: st_customers
+  - name: stg_customers
     description: "Staging model for customer records."
     columns:
       - name: CustomerID
@@ -10,7 +10,7 @@ models:
           - unique
           - not_null
 
-  - name: st_products
+  - name: stg_products
     description: "Staging model for product records."
     columns:
       - name: ProductID
@@ -19,7 +19,7 @@ models:
           - unique
           - not_null
 
-  - name: st_sales
+  - name: stg_sales
     description: "Staging model for sales records."
     columns:
       - name: TransactionID
@@ -28,7 +28,7 @@ models:
           - unique
           - not_null
 
-  - name: st_stores
+  - name: stg_stores
     description: "Staging model for store records."
     columns:
       - name: StoreID
