@@ -4,12 +4,12 @@ with source as (
 
 cleaned as (
     select
-        "ProductID"::varchar as productid,
-        "ProductName"::varchar as productname,
+        "ProductID"::varchar as product_id,
+        "ProductName"::varchar as product_name,
         "Category"::varchar as category,
-        "SubCategory"::varchar as subcategory,
+        "SubCategory"::varchar as sub_category,
         "Brand"::varchar as brand,
-        round("CostPrice"::numeric, 2) as costprice,
+        round("CostPrice"::numeric, 2) as cost_price,
         "Tier"::varchar as tier
     from source 
     where "ProductID" is not null

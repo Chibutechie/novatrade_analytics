@@ -4,17 +4,17 @@ with source as (
 
 cleaned as (
     select
-        "TransactionID"::varchar as trxid,
-        "OrderDate"::date as orderdate,
-        "CustomerID"::varchar as customerid,
-        "ProductID"::varchar as productid,
-        "StoreID"::varchar as storeid,
+        "TransactionID"::varchar as trxn_id,
+        "OrderDate"::date as order_date,
+        "CustomerID"::varchar as customer_id,
+        "ProductID"::varchar as product_id,
+        "StoreID"::varchar as store_id,
         "Quantity"::int as quantity,
-        round("UnitPrice"::numeric, 2) as unitprice,
-        round(("DiscountPct"::numeric / 100), 4) as discountpct,
-        "ReturnFlag"::boolean as returnflag,
-        "ReturnDate"::date as returndate,
-        round("ShipCost"::numeric, 2) as shipcost
+        round("UnitPrice"::numeric, 2) as unit_price,
+        round(("DiscountPct"::numeric / 100), 4) as discount,
+        "ReturnFlag"::boolean as return_flag,
+        "ReturnDate"::date as return_date,
+        round("ShipCost"::numeric, 2) as ship_cost
 
     from {{ source('raw', 'ntg_sales') }}
 )
